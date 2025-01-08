@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+:root {
+  font-size: 100%; /* 16px --> 1rem */
+  font-size: 62.5%; /* fz62.5 --> 10px --> 1rem */
+  --main-color: #504b4b;
+  --sub-color: #e9e2d4;
+  --text-color: #555;
+  --rds: 5rem; /* 50px */
+
+  --white50p: rgba(255, 255, 255, 0.5);
+  --black50p: rgba(0, 0, 0, 0.5);
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: inherit;
+}
+
+button {
+  background-color: transparent; /* bgc */
+  cursor: pointer; /* cup  */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font: 1.8em/1.5 "montserrat", sans-serif;
+  color: var(--text-color);
+  word-break: keep-all; /* wbka: 어절 단위 줄바꿈 */
+  text-transform: capitalize; /* ttc: 영문, 첫 시작 글자 대문자 */
+}
+
+.inner {
+  /* w118r+m0-a+bg */
+  width: 118rem;
+  margin: 0 auto;
+  /* background: rgba(255, 255, 0, 0.1); */
+}
+
+.sec-title {
+  font-weight: 700;
+  font-size: 4rem;
+  color: #000;
+  text-align: center;
+}
+
+.btn {
+  /* fw700+fz2r+dib */
+  font-weight: 700;
+  font-size: 2rem;
+  display: inline-block;
+  padding: 1.2rem 3.2rem;
+
+  border: 1px solid var(--white50p);
+  border-radius: var(--rds); /* rds */
+}
+
+/* 동영상이 설정한 사이즈에 꽉 차게 */
+.video-wrap iframe {
+  width: 100%;
+  height: 100%;
+  vertical-align: top; /* vat: css trigger - 한방의 해결 */
+}
+
+.about {
+  padding: 8rem 0 11.7rem;
+  text-align: center;
+}
+
+.about .inner {
+  padding: 0 15rem;
+}
+
+.about figure {
+  margin-top: 4.3rem;
+}
+
+.about figure + p {
+  margin-top: 2.8rem;
+}
+
+.team {
+  padding: 8.3rem 0 12rem;
+  background: var(--main-color);
+  color: var(--sub-color);
+  text-align: center;
+}
+
+.team sec-title {
+  color: var(--sub-color);
+}
+
+.team .btn {
+  margin-top: 4.8rem;
+}
+
+.team-slider {
+  margin-top: 4rem;
+}
+
+.team-slider .swiper-wrapper {
+  justify-content: space-between;
+}
+
+.team-slider .swiper-slide {
+  width: 28rem;
+  min-height: 33rem;
+  /* border: 1px solid #000; */
+}
+
+.team-slider .swiper-slide figure {
+  width: 24rem;
+  aspect-ratio: 1/1;
+  /* border: 1px solid #f00; */
+  border-radius: 50%;
+  overflow: hidden; /* border-radius에 설정한 값을 적용시켜줌.(원하는 모양으로 만들어줌.) */
+  display: inline-block;
+}
+
+.team-slider .swiper-slide figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ob: 틀어지는 비율을 유지해준다. */
+}
+
+.team-slider .swiper-slide dl {
+  margin-top: 2rem;
+}
+
+.team-slider .swiper-slide dl dt {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.team-slider .swiper-slide dl dd {
+  margin-top: 0.8rem;
+}
+
+.work {
+  padding: 8rem 0 12rem;
+}
+
+.work-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4.3rem;
+}
+
+.work-new {
+  width: 48rem;
+}
+
+.work-new h4 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #000;
+  margin-top: 2.8rem;
+}
+
+.work-new p {
+  margin-top: 0.8rem;
+}
+
+.work-list {
+  width: 68rem;
+  display: flex;
+  flex-wrap: wrap; /* fxww: 줄바꿈 */
+  gap: 2rem;
+}
+
+.work-list li {
+  width: 33rem;
+  height: 24.2rem;
+}
+
+.form-wrap {
+  width: 48.8rem;
+  height: 5.4rem;
+  border: 1px solid var(--main-color);
+  border-radius: var(--rds);
+
+  display: flex;
+  margin: 5.2rem auto 0;
+  overflow: hidden;
+}
+
+.form-wrap input {
+  /* width: calc(100% - 21.4rem); calc: 떨어뜨려놓다. */
+  padding: 0 2.4rem;
+  outline: none; /* 폼요소에 focus가 들어가도 검정 라인이 안 나옴 */
+
+  flex-grow: 1; /* fg: 남은 공간을 다 채워준다. /fxg1: 늘어날 수 있을 때 늘어나라 */
+}
+
+.form-wrap button {
+  background: var(--main-color);
+  color: #fff;
+  width: 21.4rem;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: capitalize; /* ttc */
+  border-radius: var(--rds); /* bdrs */
+}
+
+.map-wrap {
+  height: 68rem;
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+  transition: 0.4s;
+}
+
+.map-wrap:hover iframe {
+  filter: grayscale(0);
+}
+
+#footer {
+  background: #2c2c2c;
+  color: #fff;
+  padding: 5.6rem 0;
+}
+
+#footer .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer strong {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.sns-list {
+  display: flex;
+  gap: 2.4rem;
+}
+
+/* .sns-list li {
+  border: 1px solid #fff;
+} */
+
+.sns-list li a {
+  border: 1px solid var(--white50p);
+
+  /* gnb li a와 같은 개념의 코딩 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%; /* bdrs50p: 동그랗게 */
+}

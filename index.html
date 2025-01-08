@@ -3,22 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Agency</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <a href="#main" class="hidden">본문 바로가기</a>
 
     <!-- s: header -->
-    <!-- .inner>nav>h1.logo+ul.gnb+button.btn-login -->
-    <header>
+    <header id="header">
+      <!-- .inner>nav>h1.logo+ul.gnb+button:button.btn-login -->
       <div class="inner">
         <nav>
           <h1 class="logo">
-            <a href=""><img src="./img/apple-logo 1.svg" alt="agency" /></a>
+            <a href="#"><img src="./img/apple-logo 1.svg" alt="agency" /></a>
           </h1>
           <ul class="gnb">
             <li><a href="#">about</a></li>
@@ -46,14 +58,13 @@
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet.
           </p>
-          <a href="" class="btn">request work</a>
+          <a href="#" class="btn">request work</a>
         </div>
 
         <div class="video-wrap">
           <iframe
-            src="https://www.youtube.com/embed/YzuwW9xTvho?si=JD4UrOXMd3WFR5on&amp;controls=0&amp;autoplay=1&amp;mute=1"
+            src="https://www.youtube.com/embed/YzuwW9xTvho?si=M-y6zhnVQPswshC-&amp;controls=0&amp;autoplay=1&amp;mute=0"
             title="YouTube video player"
-            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
@@ -62,11 +73,11 @@
       </section>
       <!-- //e: video -->
 
-      <!-- section.about>.inner>h3.sec-title+figuer+p -->
+      <!-- section.about>.inner>h3.sec-title+figure+p -->
       <section class="about">
         <div class="inner">
           <h3 class="sec-title">about us</h3>
-          <figuer><img src="./img/agency-pic.jpg" alt="#" /></figuer>
+          <figure><img src="./img/agency-pic.jpg" alt="#" /></figure>
           <p>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
@@ -74,122 +85,165 @@
           </p>
         </div>
       </section>
-      <!-- //e: about -->
+      <!-- //e: about us -->
 
-      <!-- section.teem>.inner>h3.title -->
-      <section class="teem">
+      <section class="team">
         <div class="inner">
-            <h3 class="title">teem</h3>
-            <!-- swiper.DYplays -->
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-wrapper"></div>
+          <h3 class="sec-title">team</h3>
 
-                    <div class="swiper-slide">
-                        <figure>
-                            <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/03/18/112401903.2.jpg" 
-                            alt="지수"></figure></div>
-
-                    <div class="swiper-slide">
-                        <figure>
-                            <img src="https://newsimg.sedaily.com/2021/03/09/22JQQ6MY20_1.jpg" 
-                            alt="f로제"></figure></div>
-
-                    <div class="swiper-slide">
-                        <figure>
-                            <img src="https://static.news.zumst.com/images/31/2020/09/23/281686_321386_1723.jpg" 
-                            alt="제니"></figure></div>   
-
-                    <div class="swiper-slide">
-                        <figure>
-                            <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2024/05/04/124789475.2.jpg" 
-                            alt="리사"></figure></div>
-                    <!-- Add more slides as needed -->
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- Add Navigation -->
+          <div class="swiper team-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure>
+                  <img
+                    src="https://cdn.i-scmp.com/sites/default/files/d8/images/methode/2020/06/08/4b0bdfc6-a639-11ea-8ea0-d7434be00753_image_hires_121748.jpg"
+                    alt="지수"
+                  />
+                </figure>
+                <dl>
+                  <dt>Courtney Henry</dt>
+                  <dd>Founder & CEO</dd>
+                </dl>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img
+                    src="https://imageio.forbes.com/specials-images/imageserve/65a1340047720a197ed35dd8/Porsche-Sonderwunsch-Haus--The-Taycan-4S-Cross-Turismo-For-Jennie-Ruby-Jane---/0x0.jpg?format=jpg&crop=2312,1734,x0,y208,safe&width=960"
+                    alt="제니"
+                  />
+                </figure>
+                <dl>
+                  <dt>Devon Lane</dt>
+                  <dd>President of Sales</dd>
+                </dl>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img
+                    src="https://media.vanityfair.com/photos/5f8a0436fcee2a89680237c6/1:1/w_1000,h_1000,c_limit/Lisa-Blackpink-MAC-Lede.jpg"
+                    alt="리사"
+                  />
+                </figure>
+                <dl>
+                  <dt>Wade Warren</dt>
+                  <dd>Web Designer</dd>
+                </dl>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img
+                    src="https://dam.mediacorp.sg/image/upload/s--p704OKC2--/c_crop,h_1536,w_2048,x_0,y_0/c_fill,g_auto,h_622,w_830/f_auto,q_auto/v1/mediacorp/cna/image/2024/11/26/1732008240cropped3577x2682.jpg?itok=GlLVH628"
+                    alt="로제"
+                  />
+                </figure>
+                <dl>
+                  <dt>Arlene McCoy</dt>
+                  <dd>Marketing Coordinator</dd>
+                </dl>
+              </div>
             </div>
+          </div>
 
-            <a href="" class="btn">work with us</a>
-
-            <section class="work">
-                <div class="inner">
-                    <h3 class="sec-title">
-
-                        <!-- .work-wrap>.work-new+ul.work-list -->
-                        <div class="work-wrap">
-                        </div>
-
-                        <!-- .form-wrap>input+button:submit -->
-                        <div class="form-wrap">
-                            <input type="text">
-                            <button type="submit">request work</button></div>
-
-                            <div class="work-new"></div>
-                            <ul class="work-list">
-                                <li>
-                                    <a href="">
-                                        <figure><img src="./img/work_1.jpg" alt=""></figure>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <figure><img src="./img/work_2.jpg" alt=""></figure>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <figure><img src="./img/work_3.jpg" alt=""></figure>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <figure><img src="./img/work_4.jpg" alt=""></figure>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </h3>
-            </section>
-            </script>
+          <a href="" class="btn">work with us</a>
         </div>
       </section>
-      
+      <!-- //e: team -->
+
+      <section class="work">
+        <div class="inner">
+          <h3 class="sec-title">work</h3>
+
+          <!-- .work-wrap>.work-new+ul.work-list -->
+          <div class="work-wrap">
+            <div class="work-new">
+              <a href="#">
+                <figure><img src="./img/work_1.jpg" alt="#" /></figure>
+                <h4>Amet minim mollit non deserunt</h4>
+                <p>
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit mollit.
+                  Exercitation veniam...
+                </p>
+              </a>
+            </div>
+
+            <ul class="work-list">
+              <!-- li*4>a>fig>img -->
+              <li>
+                <a href="#">
+                  <figure><img src="./img/work_2.jpg" alt="" /></figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure><img src="./img/work_3.jpg" alt="" /></figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure><img src="./img/work_4.jpg" alt="" /></figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure><img src="./img/work_5.jpg" alt="" /></figure>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- .form-wrap>input+button:submit -->
+          <div class="form-wrap">
+            <input type="text" placeholder="Enter your e-mail" />
+            <button type="submit">request work</button>
+          </div>
+        </div>
+      </section>
+      <!-- //e: work -->
+
       <section class="map">
-        <h3 class="hidden"></h3>
+        <h3 class="hidden">contac us</h3>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9478695783932!2d126.93465620988046!3d37.55629197192464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2e75d4a7c41%3A0x4916c3cc69cb6c2f!2z7ZWY7J2066-465SU7Ja07Lu07ZOo7YSw7ZWZ7JuQ7Iug7LSM7KCQ!5e0!3m2!1sko!2skr!4v1736215328782!5m2!1sko!2skr"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </section>
     </main>
     <hr />
     <!-- //e: main -->
 
     <!-- s: footer -->
-     <footer id="footer">
-        <div class="inner">
-            <strong></strong>
-            <ul class="sns-list">
-                <li>
-                    <a href="">
-                    <i class="ri-facebook-fill"></i>
-                    <i class="hidden">facebook</i>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                    <i class="ri-instagram-line"></i>
-                    <i class="hidden">instagram</i>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                    <i class="ri-youtube-line"></i>
-                    <i class="hidden">youtube</i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-     </footer>
-     <!-- //e:footer -->
-     
+    <footer id="footer">
+      <div class="inner">
+        <!-- strong+ul.sns-list>li*3>a -->
+        <strong>© Company.LLC 2022</strong>
+        <ul class="sns-list">
+          <li>
+            <a href="#">
+              <i class="ri-facebook-fill"></i>
+              <i class="hidden">facebook</i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="ri-instagram-line"></i>
+              <i class="hidden">instagram</i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="ri-youtube-line"></i>
+              <i class="hidden">youtube</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- //e: footer -->
   </body>
 </html>
