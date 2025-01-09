@@ -17,13 +17,14 @@
   color: #fff;
 }
 
+hr,
 .hidden {
   position: absolute;
   margin: -1px;
   width: 1px;
   height: 1px;
   overflow: hidden;
-  clip: inherit;
+  clip: rect(0 0 0 0);
 }
 
 button {
@@ -77,6 +78,106 @@ body {
   border-radius: var(--rds); /* rds */
 }
 
+#header {
+  /* background: rgba(255, 255, 0, 0.2); */
+  position: absolute; /* psa */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#header nav {
+  height: 9rem; /* h9r */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gnb {
+  display: flex;
+  margin-left: auto; /* mla */
+  margin-right: 4rem; /* mr4r */
+}
+
+.gnb li a {
+  font-weight: 700;
+  color: #fff;
+  /* border: 1px solid #000; */
+  display: block;
+  padding: 1rem 2rem;
+}
+
+.btn-login {
+  /* w4r+h4r+bd+bdrs50p */
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid var(--white50p);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 아이콘 폰트 */
+  color: #fff;
+  font-size: 2rem;
+}
+
+.video {
+  /* height: 637px; */
+  aspect-ratio: 1/0.3318;
+  border: 5px solid #f00;
+  overflow: hidden;
+  position: relative; /* video::afterd의 기준점 */
+}
+
+.video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--black50p);
+}
+
+.video-title {
+  /* background: #5f5; */
+  position: absolute;
+  /* t50p+l50p+trft */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  text-align: center; /* tac */
+  color: #fff;
+
+  width: 113rem;
+}
+.video-wrap {
+  /* width: 1920px; */
+  aspect-ratio: 16 / 9;
+  background: skyblue;
+}
+
+.video-title h2 {
+  font-weight: 700;
+  font-size: 7.6rem;
+}
+
+.video-title p {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-top: 1rem;
+  padding: 0 26.5rem;
+}
+
+.video-title .btn {
+  margin-top: 2.8rem;
+}
+
 /* 동영상이 설정한 사이즈에 꽉 차게 */
 .video-wrap iframe {
   width: 100%;
@@ -122,9 +223,10 @@ body {
 
 .team-slider .swiper-wrapper {
   justify-content: space-between;
+  display: flex;
 }
 
-.team-slider .swiper-slide {
+.swiper-slide {
   width: 28rem;
   min-height: 33rem;
   /* border: 1px solid #000; */
@@ -243,6 +345,39 @@ body {
   background: #2c2c2c;
   color: #fff;
   padding: 5.6rem 0;
+}
+
+#footer .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer strong {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.sns-list {
+  display: flex;
+  gap: 2.4rem;
+}
+
+/* .sns-list li {
+  border: 1px solid #fff;
+} */
+
+.sns-list li a {
+  border: 1px solid var(--white50p);
+
+  /* gnb li a와 같은 개념의 코딩 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%; /* bdrs50p: 동그랗게 */
 }
 
 #footer .inner {
